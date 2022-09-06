@@ -1,6 +1,6 @@
 #include Excel2Email.ahk
 
-msgbox, Open Excel Select Cells Press ^F7 to create EMail, Make sure 
+msgbox, Open Excel Select Cells Press ^F7 to create EMail, Make sure outlook is running
 ^F7::
 
 try XL	:= ComObjActive("Excel.Application")
