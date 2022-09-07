@@ -28,3 +28,24 @@ Excel2Email(table,Mail,Mailbody)
 	oltable.AutoFitBehavior(1)
 	wRange.InsertBefore(Mailbody "`n")
 }
+
+
+; XLCopy2Email method is simple example about, how to Paste a MS Excel range onto New Email of MS Outlook Email (MS words) as Table with Xl formates 
+; it supports both kind of Emails (New Email created with default Signature / without any Signatures
+; https://github.com/Xeo786/Excel2Email
+; By Xeo786
+XLCopy2Email(Mail,Mailbody)
+{
+	myInspector := Mail.GetInspector
+	Doc := myInspector.WordEditor
+	
+	wRange := Doc.Range(0,0)
+	wRange.InsertBefore("`n")
+
+	Doc.Range(1,2).PasteExcelTable(0,0,0)
+		
+	oltable := Doc.tables(1)
+	oltable.AutoFitBehavior(1)
+
+	wRange.InsertBefore(Mailbody "`n")
+} 
