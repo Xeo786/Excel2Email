@@ -1,5 +1,6 @@
 ; Excel2Email method is simple example about, how to Appened a MS Excel range onto MS Outlook Email as (MS words) Table
 ; it supports both kind of Emails (New Email created with default Signature / without any Signatures
+; https://github.com/Xeo786/Excel2Email
 ; By Xeo786
 Excel2Email(table,Mail,Mailbody)
 {
